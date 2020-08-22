@@ -56,35 +56,20 @@ require 'views/header.php';
     <!-- Script to read keyboard-->
     <script>
         //Script adapted from https://stackoverflow.com/questions/1846599/how-to-find-out-what-character-key-is-pressed
-        //Add listener to documents when keyup call logKey
-        document.addEventListener('keyup', logKey);
-
-
-        function logKey(e) {
-            var keynum;
-            //Idenitfy Browser assign key to keynum variable
-            if(window.event) {                    
-                keynum = event.keyCode; //IE 
-            } 
-            else if(event.which){ // Netscape/Firefox/Opera                   
-                keynum = event.which;
-            }
-            //Transform from HEX CODE to CHAR
-            keynum = String.fromCharCode(keynum);
-            //Transform to lowercase
-            keynum = keynum.toLowerCase();
-            //Object FORMDATA to send POST REQUEST
-            var datos = new FormData();
-            //Append info of keyvalue
-            datos.append('key', keynum);
-            //Send
-            fetch('play.php', {
-                method: 'POST',
-                body: datos
-            });
-            //Reload page to see efects
-            location.reload(true);
-        }
+        //Add listener to documents when keydown call logKey
+        //Recieve help from, Jennifer Nordell: https://treehouse-php-102.slack.com/archives/CKJ9PV3MH/p1597941387005300?thread_ts=1597941015.005100&cid=CKJ9PV3MH
+        document.addEventListener('keydown', function(event) {
+        //Returns an array-like object of all child elements which have all of the given class name(s)
+          var keyboard = document.getElementsByClassName('key');
+        //Property returns the value of the key pressed by the user
+          var key_press = event.key;
+        //Select all the keys by choosing the "key" class. Loop through. If the key matches the class, call the .click() event on that key
+          for(var i= 0; i <= keyboard.length -1; i++) {
+              if(key_press == keyboard[i].value) {
+                keyboard[i].click();
+              }
+          }
+        });
     </script>
 
 <?php

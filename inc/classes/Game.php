@@ -100,14 +100,14 @@
     function handleLetterKey($letter)
     {
         if (!in_array($letter, $this->phrase->selected)){
-            return '"' . $letter . '"';
+            return '"' . $letter . '" class="key"' ;
         }
         else{
             if($this -> phrase ->checkLetters($letter)){
-                return '"' . $letter . '"' . ' disabled class="correct"';
+                return '"' . $letter . '"' . ' disabled class="correct key" id="' . $letter . '"' ;
             }
             else{
-                return '"' . $letter . '"' . ' disabled class="incorrect"';
+                return '"' . $letter . '"' . ' disabled class="incorrect key " id="' . $letter . '"';
             }
         }
     }
