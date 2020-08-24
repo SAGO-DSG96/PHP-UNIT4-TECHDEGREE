@@ -16,12 +16,12 @@
 
      // Array => Random phrases 
      private $phrases = [
-        'hola',
-        'adios',
-        'daniel',
-        'manco',
-        'zeltzin',
-        'amor',
+        'Boldness be my friend',
+        'Leave no stone unturned',
+        'Broken crayons still color',
+        'The adventure begins',
+        'Dream without fear',
+        'Love without limits',
     ];
 
     /**

@@ -9,9 +9,11 @@ In [images folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/maste
 
 In [views folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/master/images) you can find header and footer files as well scoreboard.php that uses resources from [images folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/master/images) to return formated html.
 
-In [css folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/master/css) has styles.css that perform the majority of style in game.
+In [css folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/master/css) has styles.css that perform all style in game.
+At the end of styles.css was added personal stylesheets, the selectors box and box:hover perform a transition color from light salmon to lightgreen. This styles runs at the intro of the game and at the end of this. The normal selector only works when you are playing and hide when finish the game.
+In addition, the game integrate https://animate.style/ code to animate keyboard and transitions in game. 
 
-In [inc folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/master/inc) tou will find config.php that runs an autoloader function to find resources in [classes folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/master/inc/classes) that have Game.php that have methods that control the flow of the game that require an object of Phrase.php. This file has methods to select phrases, verify if a letter have been chosen and others.
+In [inc folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/master/inc) tou will find config.php that runs an autoloader function to find resources in [classes folder](https://github.com/SAGO-DSG96/PHP-UNIT4-TECHDEGREE/tree/master/inc/classes) that have Game.php that have methods that control the flow of the game that require an object of Phrase.php in addition run some javascript to integrate keyboard. The Phrase calls has methods to select phrases, verify if a letter have been chosen and others.
 
 #How will graded?
 -------------

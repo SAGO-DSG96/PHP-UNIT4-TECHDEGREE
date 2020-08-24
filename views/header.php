@@ -11,19 +11,16 @@
 </head>
 
 <body>
-        <style>
-			.box {
-			background-color: lightsalmon;
-			-webkit-transition: background-color 2s ease-out;
-			-moz-transition: background-color 2s ease-out;
-			-o-transition: background-color 2s ease-out;
-			transition: background-color 2s ease-out;
-			}
-
-			.box:hover {
-			background-color: lightgreen;
-			cursor: pointer;
-			}
-		</style>
-    <div class="main-container <?php if(isset($_POST['start-game'])){ echo 'animate__animated animate__backInLeft';} ?>">
+	<div class="main-container<?php 
+	//Conditional show some transictions or not
+		if(isset($_POST['start-game'])){ 
+			echo ' animate__animated animate__backInLeft normal ';
+		} 
+		if($_SESSION['game'] -> gameOver()){
+			echo ' box ';
+		}
+		elseif(!isset($_POST['start-game'])){
+			echo ' normal ';
+		}
+		?>">
        <h2 class="header">Phrase Hunter</h2>

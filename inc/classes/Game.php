@@ -133,10 +133,10 @@
     public function gameOver()
     {
         if($this -> checkForLose() == true){
-            $output = '<h1 id="game-over-message" class="box">The phrase was: "' . $this->phrase->currentPhrase .'  " Better luck next time!</h1>';
+            $output = '<h1 id="game-over-message">The phrase was: "' . $this->phrase->currentPhrase .'  " Better luck next time!</h1>';
             return $output;
         }else if($this -> checkForWin() == true){
-            $output =  '<h1 id="game-over-message" class="box">Congratulations on guessing: "' . $this->phrase->currentPhrase . '"</h1>';
+            $output =  '<h1 id="game-over-message">Congratulations on guessing: "' . $this->phrase->currentPhrase . '"</h1>';
                 return $output;
         }
     }
